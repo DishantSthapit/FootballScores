@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e19da632.chunk.css",
+    "main.js": "/static/js/main.d3246f49.chunk.js",
+    "main.js.map": "/static/js/main.d3246f49.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d01d61ca.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d01d61ca.js.map",
+    "static/css/2.0624914a.chunk.css": "/static/css/2.0624914a.chunk.css",
+    "static/js/2.0f5ae517.chunk.js": "/static/js/2.0f5ae517.chunk.js",
+    "static/js/2.0f5ae517.chunk.js.map": "/static/js/2.0f5ae517.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.1f8fb96a02d27bbe225033b5180698b0.js": "/precache-manifest.1f8fb96a02d27bbe225033b5180698b0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.e19da632.chunk.css.map": "/static/css/main.e19da632.chunk.css.map",
+    "static/media/itunes.png": "/static/media/itunes.bc44524e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d01d61ca.js",
+    "static/css/2.0624914a.chunk.css",
+    "static/js/2.0f5ae517.chunk.js",
+    "static/css/main.e19da632.chunk.css",
+    "static/js/main.d3246f49.chunk.js"
+  ]
+}
