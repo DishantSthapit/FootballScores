@@ -1,0 +1,49 @@
+.bottom-wrapper  {
+    display: flex;
+    margin: 20px 10px;
+
+    .premier-league-results, .twitter-content, .laliga-results{
+        width: 33.33%;
+        -webkit-box-shadow: 16px 7px 26px -21px rgba(133,143,143,1);
+        -moz-box-shadow: 16px 7px 26px -21px rgba(133,143,143,1);
+        box-shadow: 16px 7px 26px -21px rgba(133,143,143,1);
+        
+
+
+    }
+
+    .heading-wrapper {
+        font-size: 30px;
+        font-family: 'Bitter', serif;
+        margin: 10px;;
+    }
+    .content-wrapper {
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        overflow: scroll;
+
+        .item-wrapper {
+            display: flex;;
+            .image-wrapper{
+                width: 20%;
+                .image {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .scores-wrapper {
+                width: 80%;
+                padding: 20px;
+                .scores{
+                    text-align: left;
+                    font-family: 'Bitter', serif;
+                    font-size: 15px;
+    
+                }
+            }
+        }
+
+    }
+}

@@ -3,8 +3,8 @@
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  background: rgb(4,247,255);
-  background: linear-gradient(-90deg, rgba(4,247,255,1) 0%, rgba(233,0,82,1) 85%);
+  /* background: rgb(4,247,255);
+  background: linear-gradient(-90deg, rgba(4,247,255,1) 0%, rgba(233,0,82,1) 85%); */
 }
 
 .App-logo {

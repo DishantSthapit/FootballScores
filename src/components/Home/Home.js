@@ -3,8 +3,8 @@ import './home.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './../NavBar/NavBar';
 import {Carousel} from 'react-bootstrap';
-import premierLeagueIcon from './../../media/premier-league.png';
-import laLigaIcon from './../../media/laliga.png';
+import {BANNER_ITEMS} from './../../data/data';
+import BottomWrapper from '../BottomWrapper/BottomWrapper';
 
 class Home extends React.Component {
     constructor(props) {
@@ -12,13 +12,20 @@ class Home extends React.Component {
         this.state = {
             premierLeague : [],
             spaninshMatchday: [],
-            LeagueTable: []
+            LeagueTable: [],
+            loading: true,
 
         }
     }
 
 
     componentDidMount() {
+
+        setTimeout(() => {
+            this.setState({ loading: false });
+          }, 1000);
+
+
         fetch(`http://api.football-data.org/v2/competitions/2021/matches?matchday=${this.props.premierLeagueMatchday}`, { //Premier League standings
             "method": "GET",
             "headers": { 'X-Auth-Token': '0324e08a61de4fde97372bd6c003ab6b' }
@@ -66,60 +73,50 @@ class Home extends React.Component {
         
     }
 
+
     render() {
+        const {loading} = this.state;
+
+        const banneItems = BANNER_ITEMS.map(item => (
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src={item.img}
+                    alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        {item.label}<br/>
+                        {item.actions}
+
+                    </Carousel.Caption>
+                </Carousel.Item>
+            ));
         return (
             <div className="home-wrapper">
-                <NavBar/>
-                <div className="featured-heading">Featured Stories</div>
-                <div className="featured-stories-wrapper">
-                    <div className="premier-league-featured">
-                       
-                        <Carousel>
-                            {this.state.premierLeague && this.state.premierLeague.map((item) => (
-                                <Carousel.Item>
-                                    <img
-                                    className="d-block w-100"
-                                    src={premierLeagueIcon}
-                                    alt="First slide"
-                                    />
-                                    <Carousel.Caption>
-                                    <div className="scores">{item.awayTeam.name} -  {item.score.fullTime.awayTeam}</div>
-                                    <div className="scores">{item.homeTeam.name} - {item.score.fullTime.homeTeam}</div>
-                                    </Carousel.Caption>
-                                </Carousel.Item>
-                            ))}
-                        </Carousel>
-                    </div>
-                    <div className="laliga-league-featured">
-
-                        <Carousel>
-                            {this.state.spaninshMatchday && this.state.spaninshMatchday.map((item) => (
-                                <Carousel.Item>
-                                    <img
-                                    className="d-block w-100"
-                                    src={laLigaIcon}
-                                    alt="First slide"
-                                    />
-                                    <Carousel.Caption>
-                                    <div className="scores">{item.awayTeam.name} -  {item.score.fullTime.awayTeam}</div>
-                                    <div className="scores">{item.homeTeam.name} - {item.score.fullTime.homeTeam}</div>
-                                    </Carousel.Caption>
-                                </Carousel.Item>
-                            ))}
-                        </Carousel>
-   
-                    </div>
-                </div>
-                <div className="premier-league-wrapper">
-                    <div className="premier-league-heading">Premier league Teams</div>
-                    <div className="premier-league-teams">
-                        {this.state.LeagueTable.map((item,index) => (
-                            <div className="team-image">
-                                <img className="team-logo" src={item.team.crestUrl}></img> 
+                {!loading ? (
+                    <>
+                        <NavBar/>
+                        <div className="carousel-wrapper">
+                            <Carousel>
+                                {banneItems}
+                            </Carousel>
+                        </div>
+                        <BottomWrapper premierLeague={this.state.premierLeague} laliga={this.state.spaninshMatchday} />
+                        <div className="premier-league-wrapper">
+                            <div className="premier-league-heading">Premier league Teams</div>
+                            <div className="premier-league-teams">
+                                {this.state.LeagueTable.map((item,index) => (
+                                    <div className="team-image">
+                                        <img className="team-logo" src={item.team.crestUrl}></img> 
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </div>
+                        </div>
+                    </>
+                    
+                ) : <div class="loader">Loading...</div>
+                }
+                
 
             </div>
 
