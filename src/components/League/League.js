@@ -2,6 +2,7 @@ import React from 'react';
 import './League.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Table} from 'react-bootstrap';
+import {FacebookProvider,Page} from 'react-facebook';
 
 class League extends React.Component {
     constructor(props) {
@@ -48,34 +49,38 @@ class League extends React.Component {
 
             <div className="league-wrapper">
                 <div className="heading">{LeagueName}</div>
+                <div className="content-wrapper">
+                    <Table size="sm" striped bordered hover variant="dark">
+                        <thead>
+                            <tr>
+                            <th>Standings</th>
+                            <th>Club Photo</th>
+                            <th>Name</th>
+                            <th>Points</th>
+                            <th>Win</th>
+                            <th>Draw</th>
+                            <th>Lost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {LeagueTable.map((item,index) => (
+                            <tr>
+                                <td>{item.position}</td>
+                                <td><img className="team-logo" src={item.team.crestUrl}></img></td>
+                                <td>{item.team.name}</td>
+                                <td>{item.points}</td>
+                                <td>{item.won}</td>
+                                <td>{item.draw}</td>
+                                <td>{item.lost}</td>
+                            </tr>        
+                        ))}
+                        </tbody>
+                    </Table>
 
-
-                <Table size="sm" striped bordered hover variant="dark">
-                    <thead>
-                        <tr>
-                        <th>Standings</th>
-                        <th>Club Photo</th>
-                        <th>Name</th>
-                        <th>Points</th>
-                        <th>Win</th>
-                        <th>Draw</th>
-                        <th>Lost</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {LeagueTable.map((item,index) => (
-                        <tr>
-                            <td>{item.position}</td>
-                            <td><img className="team-logo" src={item.team.crestUrl}></img></td>
-                            <td>{item.team.name}</td>
-                            <td>{item.points}</td>
-                            <td>{item.won}</td>
-                            <td>{item.draw}</td>
-                            <td>{item.lost}</td>
-                        </tr>        
-                    ))}
-                    </tbody>
-                </Table>
+                    <FacebookProvider appId="494792554454959">
+                        <Page href="https://www.facebook.com/premierleague" tabs="timeline" />
+                    </FacebookProvider> 
+                </div>
             </div>
 
         );
