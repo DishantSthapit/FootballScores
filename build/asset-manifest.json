@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.e19da632.chunk.css",
-    "main.js": "/static/js/main.d3246f49.chunk.js",
-    "main.js.map": "/static/js/main.d3246f49.chunk.js.map",
+    "main.css": "/static/css/main.d34ed025.chunk.css",
+    "main.js": "/static/js/main.23674579.chunk.js",
+    "main.js.map": "/static/js/main.23674579.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d01d61ca.js",
     "runtime-main.js.map": "/static/js/runtime-main.d01d61ca.js.map",
     "static/css/2.0624914a.chunk.css": "/static/css/2.0624914a.chunk.css",
-    "static/js/2.0f5ae517.chunk.js": "/static/js/2.0f5ae517.chunk.js",
-    "static/js/2.0f5ae517.chunk.js.map": "/static/js/2.0f5ae517.chunk.js.map",
+    "static/js/2.323fe920.chunk.js": "/static/js/2.323fe920.chunk.js",
+    "static/js/2.323fe920.chunk.js.map": "/static/js/2.323fe920.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1f8fb96a02d27bbe225033b5180698b0.js": "/precache-manifest.1f8fb96a02d27bbe225033b5180698b0.js",
+    "precache-manifest.28164c8fc59789e27947a80730a4ff8f.js": "/precache-manifest.28164c8fc59789e27947a80730a4ff8f.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.e19da632.chunk.css.map": "/static/css/main.e19da632.chunk.css.map",
-    "static/media/itunes.png": "/static/media/itunes.bc44524e.png"
+    "static/css/main.d34ed025.chunk.css.map": "/static/css/main.d34ed025.chunk.css.map",
+    "static/media/laliga-banner.jpg": "/static/media/laliga-banner.dae11e94.jpg",
+    "static/media/laliga.png": "/static/media/laliga.bb2bee0b.png",
+    "static/media/premier-league-banner.jpg": "/static/media/premier-league-banner.53ecc127.jpg",
+    "static/media/premier-league.png": "/static/media/premier-league.56c33012.png",
+    "static/media/seria-banner.jpg": "/static/media/seria-banner.48faaf05.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.d01d61ca.js",
     "static/css/2.0624914a.chunk.css",
-    "static/js/2.0f5ae517.chunk.js",
-    "static/css/main.e19da632.chunk.css",
-    "static/js/main.d3246f49.chunk.js"
+    "static/js/2.323fe920.chunk.js",
+    "static/css/main.d34ed025.chunk.css",
+    "static/js/main.23674579.chunk.js"
   ]
 }
